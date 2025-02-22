@@ -13,5 +13,23 @@
     </div>
     <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
     <script src="script.js"></script>
+
+<script>
+    bridge.send("VKWebAppGetCommunityToken", {
+   app_id: 53118410,
+   group_id: 215851005,
+   scope: 'messages'
+   })
+  .then((data) => { 
+    if (data.access_token) {
+      // Ключ доступа сообщества получен
+    }
+  })
+  .catch((error) => {
+    // Ошибка
+    console.log(error);
+  });
+</script>
+
 </body>
 </html>
