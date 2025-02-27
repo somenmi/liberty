@@ -3,21 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWALORES</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>AWALORES - Релизы</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #1a1a1a;
+        }
+
+        /* Шапка */
+        header {
+            background-color: #000;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Основной контент */
+        .subtitle {
+            color: #f0f0f0;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 18px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #333;
+            margin: 0 20px;
+        }
+
+        /* Сетка релизов */
+        .releases-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .release-item {
+            text-align: center;
+        }
+
+        .cover {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .cover:hover {
+            transform: scale(0.98);
+        }
+
+        .release-title {
+            color: #f0f0f0;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        /* Футер */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #f0f0f0;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>AWALORES</h1>
+        <a href="https://open.spotify.com/artist/27UjAHfHcL3Bh6u53DIT5V?si=UVA0VxETRWODDIQt5jEN5Q">AWALORES</a>
     </header>
 
-    <main>
-        <section class="cover-section">
-            <a href="player.html">
-                <img src="cover.jpg" alt="Обложка релиза" class="cover-image">
-            </a>
-            <p class="release-title">Название релиза</p>
-        </section>
-    </main>
+    <div class="subtitle">Все Релизы Исполнителя</div>
+    <hr>
+
+    <div class="releases-grid">
+        <!-- Пример релиза 1 -->
+        <div class="release-item">
+            <img src="cover1.jpg" alt="Обложка релиза" class="cover">
+            <div class="release-title">Название релиза 1</div>
+        </div>
+
+        <!-- Пример релиза 2 -->
+        <div class="release-item">
+            <img src="cover2.jpg" alt="Обложка релиза" class="cover">
+            <div class="release-title">Название релиза 2</div>
+        </div>
+
+        <!-- Добавь остальные релизы по аналогии -->
+    </div>
+
+    <footer>
+        © AWALORES
+    </footer>
 </body>
 </html>
