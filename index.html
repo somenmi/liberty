@@ -3,33 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мое VK Mini App</title>
-    <link rel="stylesheet" href="style.css">
+    <title>AWALORES</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Халё!</h1>
-        <p id="info-text">Здесь будет отображаться информация.</p>
-    </div>
-    <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
-    <script src="script.js"></script>
+    <header>
+        <h1>AWALORES</h1>
+    </header>
 
-<script>
-    bridge.send("VKWebAppGetCommunityToken", {
-   app_id: 53126592,
-   group_id: 215851005,
-   scope: 'messages'
-   })
-  .then((data) => { 
-    if (data.access_token) {
-      // Ключ доступа сообщества получен
-    }
-  })
-  .catch((error) => {
-    // Ошибка
-    console.log(error);
-  });
-</script>
-
+    <main>
+        <section class="cover-section">
+            <a href="player.html">
+                <img src="cover.jpg" alt="Обложка релиза" class="cover-image">
+            </a>
+            <p class="release-title">Название релиза</p>
+        </section>
+    </main>
 </body>
 </html>
