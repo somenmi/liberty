@@ -82,7 +82,21 @@
         .cover:hover {
             transform: scale(0.98);
         }
+        
+        .empty-cover {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            border-radius: 10px; /* Уголки */
+        }
 
+        .empty-cover:hover {
+            transform: scale(0.98);
+        }
+        
         .release-title {
             color: #f0f0f0;
             margin-top: 10px;
@@ -211,13 +225,20 @@
     
          <!-- Следующий блок с обложками ниже -->
     
-      <div class="releases-grid-2">
+      <div class="releases-grid">
         <!-- Пример релиза 13 -->
         <div class="release-item">
             <img src="https://sun9-77.userapi.com/impf/PQPhmzscgvr8BFTKK5eS4cDbyiSK0IqTrf-2yA/ErHXZDsjyPs.jpg?size=300x300&amp;quality=96&amp;sign=206f3d1f34883aadca4418a168708ee6&amp;type=audio" alt="Обложка релиза" class="cover">
             <div class="release-title">Grace</div>
         </div>
+          
+        <!-- Пример релиза 14 -->
+        <div class="release-item">
+            <div class="empty-cover"></div>
+        </div> 
       </div>
+
+ 
     
     <footer>
         ©AWALORES
