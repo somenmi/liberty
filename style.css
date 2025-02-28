@@ -55,3 +55,46 @@ audio {
     max-width: 400px;
     margin-top: 20px;
 }
+
+/*---------------------------*/
+/* Про исчезновение страницы */
+/*---------------------------*/
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif; /* заменить шрифт */
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#section1 {
+    background-color: #3498db;
+}
+
+#section2 {
+    background-color: #2ecc71;
+}
+
+#section3 {
+    background-color: #e74c3c;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
