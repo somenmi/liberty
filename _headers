@@ -1,0 +1,4 @@
+/*
+  Access-Control-Allow-Origin: *
+  X-Frame-Options: ALLOW-FROM https://vk.com
+  Content-Security-Policy: frame-ancestors vk.com *.vk.com
