@@ -1,19 +1,18 @@
 {
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
         {
-          "key": "Custom-Header",
-          "value": "My Custom Value"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'"
+          "value": "default-src 'self' https://vk.com https://awallib.vercel.app https://somenmi.github.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://sun9-77.userapi.com https://sun9-13.userapi.com https://sun9-20.userapi.com https://sun9-65.userapi.com https://sun9-37.userapi.com https://sun9-17.userapi.com https://sun9-12.userapi.com https://sun9-79.userapi.com https://sun9-80.userapi.com https://sun9-71.userapi.com https://sun9-64.userapi.com https://sun9-24.userapi.com https://sun9-42.userapi.com; script-src 'self' https://vk.com https://unpkg.com; connect-src 'self' https://vk.com https://awallib.vercel.app https://somenmi.github.io; frame-ancestors https://vk.com;"
         }
       ]
     }
