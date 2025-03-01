@@ -7,8 +7,6 @@
     connect-src 'self' https://vk.com https://awallib.vercel.app;
     frame-ancestors https://vk.com;
 
-  X-Frame-Options: ALLOW-FROM https://vk.com
-
   Access-Control-Allow-Origin: *
   Access-Control-Allow-Methods: GET, POST, OPTIONS
   Access-Control-Allow-Headers: Content-Type, Authorization
