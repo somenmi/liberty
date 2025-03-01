@@ -1,10 +1,11 @@
 /*
   Content-Security-Policy:
-    default-src 'self' https://vk.com https://awallib.vercel.app https://sun9-*.userapi.com;
+    default-src 'self' https://vk.com https://awallib.vercel.app;
     style-src 'self' 'unsafe-inline';
-    img-src 'self' data: https://sun9-*.userapi.com *;
+    img-src 'self' data: ;
     script-src 'self' https://vk.com https://unpkg.com;
     connect-src 'self' https://vk.com https://awallib.vercel.app;
+    frame-ancestors https://vk.com;
 
   X-Frame-Options: ALLOW-FROM https://vk.com
 
