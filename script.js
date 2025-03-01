@@ -14,27 +14,3 @@ const infoData = {
 
 // Обновляем текст на странице
 document.getElementById('info-text').textContent = infoData.description;
-
-// Скрипт по плавному исчезновению и т.д.
-document.addEventListener("DOMContentLoaded", function() {
-    const sections = document.querySelectorAll('.section');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                entry.target.classList.remove('hidden');
-            } else {
-                entry.target.classList.add('hidden');
-                entry.target.classList.remove('visible');
-            }
-        });
-    }, {
-        threshold: 0.5
-    });
-
-    sections.forEach(section => {
-        section.classList.add('hidden');
-        observer.observe(section);
-    });
-});
