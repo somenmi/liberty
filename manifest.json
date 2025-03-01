@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "version": "1.0.0",
+  "name": "AWALORES Music",
+  "description": "Официальная страница с музыкальными релизами AWALORES",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "white",
+  "theme_color": "5181b8",
+}
