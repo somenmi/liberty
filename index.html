@@ -6,6 +6,21 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
     <title>AWALORES - Дискография</title>
     <link rel="stylesheet" href="styles.css">
+    <meta property="og:title" content="AWALORES Music">
+    <meta property="og:description" content="Официальная страница с музыкальными релизами AWALORES">
+            <script src="https://vk.com/js/api/openapi.js" type="text/javascript"></script>
+                <script>
+                    // Инициализация без авторизации
+                     VK.init({
+                         apiId: 53118410, // Ваш ID приложения
+                         onlyWidgets: true // Если не требуется авторизация
+                        });
+                </script>
+                <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+                <script>
+                    // Отправляет событие инициализации нативному клиенту
+                     vkBridge.send('VKWebAppInit');
+                </script>
     <style>
         * {
             margin: 0;
