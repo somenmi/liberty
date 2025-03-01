@@ -16,7 +16,7 @@
         }
         {
           "key": "X-Frame-Options",
-          "value": "ALLOW-FROM awallib-awals-projects-31730073.vercel.app"
+          "value": "ALLOW-FROM https://awallib-awals-projects-31730073.vercel.app/"
         }
       ]
     }
