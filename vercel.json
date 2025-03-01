@@ -1,0 +1,21 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)", // Применяется ко всем файлам, кастомные заголовки
+      "headers": [
+        {
+          "key": "Custom-Header",
+          "value": "My Custom Value"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'"
+        }
+      ]
+    }
+  ]
+}
