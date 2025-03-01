@@ -78,15 +78,15 @@ body, html {
 }
 
 #section1 {
-    background-color: #3498db;
+    background-color: #3498db;                         /* Выбрать правильные секции */
 }
 
 #section2 {
-    background-color: #2ecc71;
+    background-color: #2ecc71;                         /* Выбрать правильные секции */
 }
 
 #section3 {
-    background-color: #e74c3c;
+    background-color: #e74c3c;                         /* Выбрать правильные секции */
 }
 
 .hidden {
