@@ -171,6 +171,33 @@
                      vkBridge.send('VKWebAppInit');
                 </script>
                 <script src="script.js"></script>
+                <script>
+                    // Функция для проверки видимости элемента
+                   function isElementInViewport(el) {
+                       const rect = el.getBoundingClientRect();
+                       return (
+                           rect.top >= 0 &&
+                           rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+                       );
+                   }
+
+                   // Функция для обработки скролла
+                   function handleScroll() {
+                       const items = document.querySelectorAll('.release-item');
+                       items.forEach(item => {
+                           if (isElementInViewport(item)) {
+                               item.classList.add('visible');
+                           }
+                       });
+                   }
+
+        // Добавляем обработчик события скролла
+        window.addEventListener('scroll', handleScroll);
+
+        // Вызываем handleScroll при загрузке страницы, чтобы проверить видимость элементов
+        window.addEventListener('load', handleScroll);
+    </script>
+
 </head>
 <body>
     <header>
