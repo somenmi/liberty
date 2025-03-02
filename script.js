@@ -15,7 +15,36 @@ const infoData = {
 // Обновляем текст на странице
 document.getElementById('info-text').textContent = infoData.description;
 
-// ТОЛЬКО ПО ГРАДИЕНТУ, чтобы появлялапсь только при скроле
+// -------------- Появление Ичезновение
+// Функция для проверки видимости элемента
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top <= window.innerHeight && rect.bottom >= 0
+    );
+}
+
+// Функция для обработки скролла
+function handleScroll() {
+    const items = document.querySelectorAll('.release-item');
+    items.forEach(item => {
+        if (isElementInViewport(item)) {
+            item.classList.add('visible');
+            item.classList.remove('unvisible');
+        } else {
+            item.classList.add('unvisible');
+            item.classList.remove('visible');
+        }
+    });
+}
+
+// Добавляем обработчик события скролла
+window.addEventListener('scroll', handleScroll);
+
+// Вызываем handleScroll при загрузке страницы, чтобы проверить видимость элементов
+window.addEventListener('load', handleScroll);
+
+// -------------- ТОЛЬКО ПО ГРАДИЕНТУ, чтобы появлялапсь только при скроле
 window.addEventListener('scroll', () => {
     const fadeTop = document.querySelector('.fade-top');
     const fadeBottom = document.querySelector('.fade-bottom');
