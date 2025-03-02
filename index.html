@@ -151,6 +151,18 @@
         .fade-in {
             animation: fadeIn 1s ease-in-out forwards;
         }
+
+        /* Стили для эффекта затухания */
+        .release-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .release-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
             <script src="https://vk.com/js/api/openapi.js" type="text/javascript"></script>
                 <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
