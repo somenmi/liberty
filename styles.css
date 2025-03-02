@@ -72,3 +72,34 @@ audio {
     opacity: 1;
     transform: translateY(0);
 }
+
+ /* ТОЛЬКО ГРАДИНЕТЫ */
+/* Основной контейнер для контента */
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Градиент сверху */
+.fade-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px; /* Высота градиента */
+    background: linear-gradient(to bottom, #242424, rgba(36, 36, 36, 0));
+    z-index: 2;
+    pointer-events: none; /* Чтобы градиент не перехватывал клики */
+}
+
+/* Градиент снизу */
+.fade-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px; /* Высота градиента */
+    background: linear-gradient(to top, #242424, rgba(36, 36, 36, 0));
+    z-index: 2;
+    pointer-events: none; /* Чтобы градиент не перехватывал клики */
+}
