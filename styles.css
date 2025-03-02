@@ -60,41 +60,15 @@ audio {
 /* Про исчезновение страницы */
 /*---------------------------*/
 
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif; /* заменить шрифт */
-}
-
-.section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-#section1 {
-    background-color: #3498db;                         /* Выбрать правильные секции */
-}
-
-#section2 {
-    background-color: #2ecc71;                         /* Выбрать правильные секции */
-}
-
-#section3 {
-    background-color: #e74c3c;                         /* Выбрать правильные секции */
-}
-
-.hidden {
+/* Стили для элементов, которые будут затухать */
+.release-item {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(20px); /* Начальное смещение для плавного появления */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.visible {
+/* Класс, который добавляется при появлении элемента в зоне видимости */
+.release-item.visible {
     opacity: 1;
     transform: translateY(0);
 }
