@@ -73,6 +73,12 @@ audio {
     transform: translateY(0);
 }
 
+.release-item.unvisible {
+    opacity: 0;
+    transform: translateY(20px); /* Начальное смещение для плавного исчезновения */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
  /* ТОЛЬКО ГРАДИНЕТЫ */
 /* Основной контейнер для контента */
 .content {
