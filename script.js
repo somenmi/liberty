@@ -39,3 +39,22 @@ window.addEventListener('scroll', handleScroll);
 
 // Вызываем handleScroll при загрузке страницы, чтобы проверить видимость элементов, для исчезновение страницы
 window.addEventListener('load', handleScroll);
+
+// ТОЛЬКО ПО ГРАДИЕНТУ, чтобы появлялапсь только при скроле
+window.addEventListener('scroll', () => {
+    const fadeTop = document.querySelector('.fade-top');
+    const fadeBottom = document.querySelector('.fade-bottom');
+    const scrollTop = window.scrollY;
+
+    if (scrollTop > 0) {
+        fadeTop.style.opacity = 1;
+    } else {
+        fadeTop.style.opacity = 0;
+    }
+
+    if (window.innerHeight + window.scrollY < document.body.offsetHeight) {
+        fadeBottom.style.opacity = 1;
+    } else {
+        fadeBottom.style.opacity = 0;
+    }
+});
