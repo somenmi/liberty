@@ -192,6 +192,25 @@
             z-index: 2;
             pointer-events: none;
         }
+        /* Стили для строки с иконками */
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            background-color: #1c1c1c;
+        }
+
+        .icon-container a {
+            text-decoration: none;
+            color: #f0f0f0;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .icon-container a:hover {
+            color: #0077b5; /* Цвет при наведении, можно изменить */
+        }
     </style>
             <script src="https://vk.com/js/api/openapi.js" type="text/javascript"></script>
                 <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
