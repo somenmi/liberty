@@ -96,6 +96,8 @@ audio {
     background: linear-gradient(to bottom, #242424, rgba(36, 36, 36, 0));
     z-index: 2;
     pointer-events: none; /* Чтобы градиент не перехватывал клики */
+    opacity: 0; /* Начальное состояние */
+    transition: opacity 0.3s ease;
 }
 
 /* Градиент снизу */
@@ -108,4 +110,6 @@ audio {
     background: linear-gradient(to top, #242424, rgba(36, 36, 36, 0));
     z-index: 2;
     pointer-events: none; /* Чтобы градиент не перехватывал клики */
+    opacity: 0; /* Начальное состояние */
+    transition: opacity 0.3s ease;
 }
