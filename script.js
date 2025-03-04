@@ -13,7 +13,7 @@ const infoData = {
 };
 
 // Обновляем текст на странице
-document.getElementById('info-text').textContent = infoData.description;
+// мб пригодится потом - document.getElementById('info-text').textContent = infoData.description;
 
 // -------------- Появление Ичезновение
 // Функция для проверки видимости элемента
