@@ -291,7 +291,31 @@
         // Вызываем handleScroll при загрузке страницы, чтобы проверить видимость элементов
         window.addEventListener('load', handleScroll);
     </script>
+<!-- - - - VK плейлист - - - -->
+<div id="vk_playlist_-215851005_13" class="vk-playlist-container"></div>
+<script type="text/javascript" src="https://vk.com/js/api/openapi.js?173"></script>
+<script type="text/javascript">
+  (function() {
+    VK.Widgets.Playlist("vk_playlist_-215851005_13", -215851005, 13, 'a23c429c8fae9942b3');
+  }());
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Ждем, пока iframe загрузится
+    const checkIframe = setInterval(() => {
+        const iframe = document.querySelector('.vk-playlist-container iframe');
+        if (iframe) {
+            clearInterval(checkIframe); // Останавливаем проверку
 
+            // Изменяем стили iframe
+            iframe.style.backgroundColor = '#242424'; // Фон iframe
+            iframe.style.border = 'none'; // Убираем границу
+			// Изменяем стили iframe
+            iframe.style.filter = 'invert(1) brightness(0.8) contrast(0.75) hue-rotate(320deg) grayscale(1) saturate(0.1)';
+        }
+    }, 100); // Проверяем каждые 100 мс
+});
+</script>
 </head>
 <body>
 <!-- Градиент сверху -->
@@ -331,14 +355,6 @@
         <img src="icons/soundcloud.png" alt="SoundCloud">
     </a>
 </div>
-<!-- - - - VK плейлист - - - -->
-<div id="vk_playlist_-215851005_13" class="vk-playlist-container"></div>
-<script type="text/javascript" src="https://vk.com/js/api/openapi.js?173"></script>
-<script type="text/javascript">
-  (function() {
-    VK.Widgets.Playlist("vk_playlist_-215851005_13", -215851005, 13, 'a23c429c8fae9942b3');
-  }());
-</script>
 
     <div class="subtitle">Альбомы × EP</div>
     <hr>  <!-- Полосочка -->
