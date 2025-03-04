@@ -58,38 +58,5 @@ window.addEventListener('load', handleScroll);
 // Вызываем handleScroll сразу после загрузки страницы
 handleScroll();
 
-// Проверка виджета, если не загрузился убирает его
-document.addEventListener('DOMContentLoaded', function() {
-    const container = document.getElementById('vk_playlist_-215851005_13');
-
-    // Проверяем, загрузился ли iframe
-    const checkIframe = setInterval(() => {
-        const iframe = container.querySelector('iframe');
-
-        if (iframe) {
-            clearInterval(checkIframe); // Останавливаем проверку
-
-            // Добавляем обработчик ошибок для iframe
-            iframe.onerror = () => {
-                container.style.display = 'none'; // Скрываем контейнер при ошибке
-            };
-
-            // Проверяем, загрузился ли контент iframe
-            iframe.onload = () => {
-                if (!iframe.contentWindow || !iframe.contentWindow.document.body.innerHTML.trim()) {
-                    container.style.display = 'none'; // Скрываем контейнер, если iframe пустой
-                }
-            };
-        }
-    }, 100); // Проверяем каждые 100 мс
-
-    // Если iframe не создается в течение 5 секунд, скрываем контейнер
-    setTimeout(() => {
-        if (!container.querySelector('iframe')) {
-            container.style.display = 'none'; // Скрываем контейнер
-        }
-    }, 5000); // Таймаут 5 секунд
-});
-
 // Обновляем текст на странице
 // мб пригодится потом - document.getElementById('info-text').textContent = infoData.description;
