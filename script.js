@@ -58,20 +58,5 @@ window.addEventListener('load', handleScroll);
 // Вызываем handleScroll сразу после загрузки страницы
 handleScroll();
 
-// Плейлист ВК его стилизация
-document.addEventListener('DOMContentLoaded', function() {
-    // Ждем, пока iframe загрузится
-    const checkIframe = setInterval(() => {
-        const iframe = document.querySelector('.vk-playlist-container iframe');
-        if (iframe) {
-            clearInterval(checkIframe); // Останавливаем проверку
-
-            // Изменяем стили iframe
-            iframe.style.backgroundColor = '#242424'; // Фон iframe
-            iframe.style.border = 'none'; // Убираем границу
-        }
-    }, 100); // Проверяем каждые 100 мс
-});
-
 // Обновляем текст на странице
 // мб пригодится потом - document.getElementById('info-text').textContent = infoData.description;
