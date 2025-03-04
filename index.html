@@ -318,36 +318,6 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </head>
 <body>
-<!-- JS для доступа к МУЗЫКЕ VK -->
-    <div id="app">
-        <button id="request-audio">Разрешить доступ к музыке</button>
-        <div id="audio-data"></div>
-    </div>
-
-    <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            vkBridge.send('VKWebAppInit');
-
-            document.getElementById('request-audio').addEventListener('click', async () => {
-                try {
-                    const response = await vkBridge.send('VKWebAppGetAuthToken', {
-                        app_id: 53126592, // ID VK mini-app
-                        scope: 'audio'
-                    });
-
-                    const accessToken = response.access_token;
-                    console.log('Access Token:', accessToken);
-
-                    const audioResponse = await fetch(`https://api.vk.com/method/audio.get?access_token=${accessToken}&v=5.131`);
-                    const audioData = await audioResponse.json();
-                    document.getElementById('audio-data').textContent = JSON.stringify(audioData, null, 2);
-                } catch (error) {
-                    console.error('Error:', error);
-                }
-            });
-        });
-    </script>
 <!-- Градиент сверху -->
 <div class="fade-top"></div>
 <!-- Основной контент -->
@@ -386,8 +356,21 @@ document.addEventListener('DOMContentLoaded', function() {
     </a>
 </div>
 		<!-- - - - VK плейлист - - - -->
-		<div id="vk_playlist_-215851005_13" class="vk-playlist-container"></div>
-    <div class="subtitle">Альбомы × EP</div>
+<div id="vk_playlist_-215851005_13" class="vk-playlist-container"></div>
+    <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            vkBridge.send('VKWebAppInit');
+
+            const iframe = document.createElement('iframe');
+            iframe.src = 'https://vk.com/widget_playlist.php?act=a_playlist&oid=-215851005&pid=13&hash=a23c429c8fae9942b3';
+            iframe.width = '100%';
+            iframe.height = '400px';
+            iframe.style.border = 'none';
+            document.getElementById('vk_playlist_-215851005_13').appendChild(iframe);
+        });
+    </script>
+<div class="subtitle">Альбомы × EP</div>
     <hr>  <!-- Полосочка -->
 
     <div class="releases-grid">
