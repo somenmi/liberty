@@ -6,16 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// Пример данных, которые могут быть получены от сервера или API
-const infoData = {
-    title: "Информация о приложении",
-    description: "Это простое мини-приложение для VK, которое отображает информацию на странице."
-};
-
-// Обновляем текст на странице
-// мб пригодится потом - document.getElementById('info-text').textContent = infoData.description;
-
-// -------------- Появление Ичезновение
 // Функция для проверки видимости элемента
 function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();
@@ -36,9 +26,7 @@ function handleScroll() {
             item.classList.remove('visible');
         }
     });
-}
 
-// -------------- ТОЛЬКО ПО ГРАДИЕНТУ, чтобы появлялапсь только при скроле
     // Логика для градиентов
     const fadeTop = document.querySelector('.fade-top');
     const fadeBottom = document.querySelector('.fade-bottom');
@@ -69,3 +57,6 @@ window.addEventListener('load', handleScroll);
 
 // Вызываем handleScroll сразу после загрузки страницы
 handleScroll();
+
+// Обновляем текст на странице
+// мб пригодится потом - document.getElementById('info-text').textContent = infoData.description;
