@@ -332,7 +332,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('request-audio').addEventListener('click', async () => {
                 try {
                     const response = await vkBridge.send('VKWebAppGetAuthToken', {
-                        app_id: YOUR_APP_ID, // Замените на ID вашего приложения
+                        app_id: 53126592, // ID VK mini-app
                         scope: 'audio'
                     });
 
