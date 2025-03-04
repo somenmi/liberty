@@ -13,7 +13,7 @@
         style-src 'self' 'unsafe-inline' https://vk.com; 
         img-src 'self' data: https://sun9-77.userapi.com https://sun9-13.userapi.com https://sun9-20.userapi.com https://sun9-65.userapi.com https://sun9-37.userapi.com https://sun9-17.userapi.com https://sun9-12.userapi.com https://sun9-79.userapi.com https://sun9-80.userapi.com https://sun9-71.userapi.com https://sun9-64.userapi.com https://sun9-24.userapi.com https://sun9-42.userapi.com https://vk.com; 
         script-src 'self' 'unsafe-inline' https://vk.com https://unpkg.com; 
-        connect-src 'self' https://vk.com https://awallib-awals-projects-31730073.vercel.app https://awallib.vercel.app https://somenmi.github.io;
+        connect-src 'self' https://vk.com https://api.vk.com https://awallib-awals-projects-31730073.vercel.app https://awallib.vercel.app https://somenmi.github.io;
         frame-src https://vk.com;
     ">
     <meta property="og:title" content="AWALORES Music">
@@ -318,6 +318,36 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </head>
 <body>
+<!-- JS для доступа к МУЗЫКЕ VK -->
+    <div id="app">
+        <button id="request-audio">Разрешить доступ к музыке</button>
+        <div id="audio-data"></div>
+    </div>
+
+    <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            vkBridge.send('VKWebAppInit');
+
+            document.getElementById('request-audio').addEventListener('click', async () => {
+                try {
+                    const response = await vkBridge.send('VKWebAppGetAuthToken', {
+                        app_id: YOUR_APP_ID, // Замените на ID вашего приложения
+                        scope: 'audio'
+                    });
+
+                    const accessToken = response.access_token;
+                    console.log('Access Token:', accessToken);
+
+                    const audioResponse = await fetch(`https://api.vk.com/method/audio.get?access_token=${accessToken}&v=5.131`);
+                    const audioData = await audioResponse.json();
+                    document.getElementById('audio-data').textContent = JSON.stringify(audioData, null, 2);
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            });
+        });
+    </script>
 <!-- Градиент сверху -->
 <div class="fade-top"></div>
 <!-- Основной контент -->
