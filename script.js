@@ -38,27 +38,34 @@ function handleScroll() {
     });
 }
 
-// Добавляем обработчик события скролла
-window.addEventListener('scroll', handleScroll);
-
-// Вызываем handleScroll при загрузке страницы, чтобы проверить видимость элементов
-window.addEventListener('load', handleScroll);
-
 // -------------- ТОЛЬКО ПО ГРАДИЕНТУ, чтобы появлялапсь только при скроле
-window.addEventListener('scroll', () => {
+    // Логика для градиентов
     const fadeTop = document.querySelector('.fade-top');
     const fadeBottom = document.querySelector('.fade-bottom');
     const scrollTop = window.scrollY;
+    const scrollBottom = window.innerHeight + window.scrollY;
+    const documentHeight = document.documentElement.scrollHeight;
 
+    // Градиент сверху
     if (scrollTop > 0) {
         fadeTop.style.opacity = 1;
     } else {
         fadeTop.style.opacity = 0;
     }
 
-    if (window.innerHeight + window.scrollY < document.body.offsetHeight) {
+    // Градиент снизу
+    if (scrollBottom < documentHeight) {
         fadeBottom.style.opacity = 1;
     } else {
         fadeBottom.style.opacity = 0;
     }
-});
+}
+
+// Добавляем обработчик события скролла
+window.addEventListener('scroll', handleScroll);
+
+// Вызываем handleScroll при загрузке страницы, чтобы проверить видимость элементов
+window.addEventListener('load', handleScroll);
+
+// Вызываем handleScroll сразу после загрузки страницы
+handleScroll();
