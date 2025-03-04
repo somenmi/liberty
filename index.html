@@ -197,23 +197,19 @@
         .icon-container {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            padding: 20px;
+            gap: 10px; /* Уменьшенный промежуток между иконками */
+            padding: 10px;
             background-color: #1c1c1c;
+            flex-wrap: wrap; /* Перенос иконок на новую строку, если не хватает места */
         }
 
         .icon-container a {
             text-decoration: none;
-            color: #f0f0f0;
-            font-size: 24px;
-            transition: transform 0.3s ease, opacity 0.3s ease;
         }
 
         .icon-container a img {
-            width: 5vw; /* Автоскейл: 5% от ширины экрана */
-            height: 5vw; /* Сохраняем пропорции */
-            max-width: 48px; /* Максимальный размер */
-            max-height: 48px; /* Максимальный размер */
+            width: 32px; /* Стандартный размер иконок */
+            height: 32px;
             transition: transform 0.3s ease;
         }
 
@@ -221,18 +217,31 @@
             transform: scale(1.2); /* Увеличение иконки при наведении */
         }
 
-        /* Медиазапросы для тонкой настройки */
+        /* Медиазапросы для адаптации под маленькие экраны */
         @media (max-width: 768px) {
             .icon-container a img {
-                width: 6vw;
-                height: 6vw;
+                width: 28px;
+                height: 28px;
             }
         }
 
         @media (max-width: 480px) {
             .icon-container a img {
-                width: 8vw;
-                height: 8vw;
+                width: 24px;
+                height: 24px;
+            }
+            .icon-container {
+                gap: 8px; /* Ещё меньше промежуток на очень маленьких экранах */
+            }
+        }
+
+        @media (max-width: 320px) { /* Для iPhone SE */
+            .icon-container a img {
+                width: 20px;
+                height: 20px;
+            }
+            .icon-container {
+                gap: 6px; /* Минимальный промежуток */
             }
         }
     </style>
