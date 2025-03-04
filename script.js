@@ -58,5 +58,22 @@ window.addEventListener('load', handleScroll);
 // Вызываем handleScroll сразу после загрузки страницы
 handleScroll();
 
+// - - - VK плейлист фильтр цвета
+document.addEventListener('DOMContentLoaded', function() {
+    // Ждем, пока iframe загрузится
+    const checkIframe = setInterval(() => {
+        const iframe = document.querySelector('.vk-playlist-container iframe');
+        if (iframe) {
+            clearInterval(checkIframe); // Останавливаем проверку
+
+            // Изменяем стили iframe
+            iframe.style.backgroundColor = '#242424'; // Фон iframe
+            iframe.style.border = 'none'; // Убираем границу
+			// Изменяем стили iframe
+            iframe.style.filter = 'invert(1) brightness(0.8) contrast(0.75) hue-rotate(320deg) grayscale(1) saturate(0.1)';
+        }
+    }, 100); // Проверяем каждые 100 мс
+});
+
 // Обновляем текст на странице
 // мб пригодится потом - document.getElementById('info-text').textContent = infoData.description;
