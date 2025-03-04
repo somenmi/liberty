@@ -62,14 +62,6 @@
             margin: 0 20px;
         }
 
-        .hrfff {
-            border: 0;
-            height: 1px;
-            background: #adadad;
-            filter: blur(20px);
-            margin: 0 20px;
-        }
-
         /* Сетка релизов */
         .releases-grid {
             display: grid;
@@ -210,11 +202,12 @@
             background-color: #202020;
             flex-wrap: wrap; /* Перенос иконок на новую строку, если не хватает места */
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
         }
 
         .icon-container a {
             text-decoration: none;
-            filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.3)); /* Тень */
+            filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.3)); /* Тень */
         }
 
         .icon-container a img {
