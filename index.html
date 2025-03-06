@@ -11,7 +11,7 @@
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self' https://vk.com https://awallib-awals-projects-31730073.vercel.app https://awallib.vercel.app https://somenmi.github.io; 
         style-src 'self' 'unsafe-inline' https://vk.com; 
-        img-src 'self' data: https://sun9-77.userapi.com https://sun9-13.userapi.com https://sun9-20.userapi.com https://sun9-65.userapi.com https://sun9-37.userapi.com https://sun9-17.userapi.com https://sun9-12.userapi.com https://sun9-79.userapi.com https://sun9-80.userapi.com https://sun9-71.userapi.com https://sun9-64.userapi.com https://sun9-24.userapi.com https://sun9-42.userapi.com https://vk.com; 
+        img-src 'self' data: https://sun9-66.userapi.com https://sun9-77.userapi.com https://sun9-13.userapi.com https://sun9-20.userapi.com https://sun9-65.userapi.com https://sun9-37.userapi.com https://sun9-17.userapi.com https://sun9-12.userapi.com https://sun9-79.userapi.com https://sun9-80.userapi.com https://sun9-71.userapi.com https://sun9-64.userapi.com https://sun9-24.userapi.com https://sun9-42.userapi.com https://vk.com; 
         script-src 'self' 'unsafe-inline' https://vk.com https://unpkg.com; 
         connect-src 'self' https://vk.com https://api.vk.com https://awallib-awals-projects-31730073.vercel.app https://awallib.vercel.app https://somenmi.github.io;
         frame-src https://vk.com;
@@ -19,242 +19,399 @@
     <meta property="og:title" content="AWALORES Music">
     <meta property="og:description" content="Официальная страница с музыкальными релизами AWALORES">
     <meta property="og:image" content="https://somenmi.github.io/liberty/icon128.png">
-        <title>AWALORES - Дискография</title>
-        <style>
-        * {
-            margin: 0;
-            padding: 0; /* Поля вокруг текста */
-            box-sizing: border-box;
-            font-family: Verdana, sans-serif; /* Шрифты */
-            letter-spacing: 0.6px; /* Добавлен интервал между буквами */
-            text-shadow: 1px 1px 2px black, 0 0 1.5em gray, 0 0 0.2em black; /* Тени */
-        }
+    <title>AWALORES - Дискография</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0.6px;
+    text-shadow: 1px 1px 2px black, 0 0 1.5em gray, 0 0 0.2em black;
+}
 
-        body {
-            background-color: #242424;
-        }
+body {
+    background: radial-gradient(circle, #202020, #342a43);
+    margin: 0;
+    height: 100vh;
+    color: #f0f0f0;
+    text-align: center;
+}
 
-        /* Шапка */
-        header {
-            background-color: #1c1c1c;
-            padding: 20px;
-            text-align: center;
-        }
+header {
+    background: radial-gradient(circle, #202020, #342a43);
+    padding: 20px;
+    text-align: center;
+}
 
-        header a {
-            color: white;
-            text-decoration: none;
-            font-size: 27px;
-            font-weight: bold;
-        }
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: white;
+}
 
-        /* Основной контент */
-        .subtitle {
-            color: #f0f0f0;
-            text-align: center;
-            padding: 15px 0;
-            font-size: 15px;
-        }
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 27px;
+    font-weight: bold;
+}
 
-        hr {
-            border: 0;
-            height: 1px;
-            background: #333;
-            margin: 0 20px;
-        }
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    margin: 0 20px;
+}
 
-        /* Сетка релизов */
-        .releases-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            padding: 20px;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-        .releases-grid-2 {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: 20px;
-            padding: 20px;
-            max-width: 250px;
-            margin: 0 auto;
-        }
+footer {
+    text-align: center;
+    padding: 10px 0;
+    color: #f0f0f0;
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.15);
+    margin-top: auto;
+    letter-spacing: 2px;
+}
 
-        .release-item {
-            text-align: center;
-            filter: drop-shadow(0px 3px 1px rgba(0, 0, 0, 0.1)); /* Тень */
-        }
+audio {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+}
 
-        .cover {
-            width: 100%;
-            aspect-ratio: 1/1;
-            object-fit: cover;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.2s;
-            border-radius: 10px; /* Уголки */
-            shadow: 0 3 4px 6px rgba(0, 0, 0, 0.5);
-        }
+.icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background: radial-gradient(circle, #141414, #1f1d23, #242424);
+    flex-wrap: wrap;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 -6px 15px rgba(0, 0, 0, 0.15);
+}
 
-        .cover:hover {
-            transform: scale(0.98);
-            opacity: 0.9; /* Легкое затемнение */
-            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
-            transition: box-shadow 0.5s ease, transform 0.4s ease, opacity 0.3s ease;
-        }
-        
-        .empty-cover {
-            width: 100%;
-            aspect-ratio: 1/1;
-            object-fit: cover;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.2s;
-            border-radius: 10px; /* Уголки */
-            background-color: #282828;
-        }
+.icon-container a {
+    text-decoration: none;
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.25));
+}
 
-        .empty-cover:hover {
-            transform: scale(0.98); 
-            opacity: 0.9; /* Легкое затемнение */
-            box-shadow: 0 10px 20px rgba(255, 135, 135, 0.15);
-            transition: box-shadow 0.5s ease, transform 0.2s ease, opacity 0.3s ease;
-        }
-        
-        .release-title {
-            color: #f0f0f0;
-            margin-top: 10px;
-            font-size: 14px;
-            hyphens: auto;
-        }
+.icon-container a img {
+    width: 38px;
+    height: 38px;
+    transition: transform 0.3s ease;
+}
 
-         /* Футер */
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            color: #f0f0f0;
-            font-size: 12px; /* Уменьшенный размер текста */
-            background-color: #1c1c1c;
-            margin-top: auto; /* Прикрепление к низу */
-            letter-spacing: 2px; /* Добавлен интервал между буквами */
-        }
+.icon-container a:hover img {
+    transform: scale(1.2);
+}
 
-         /* Анимация для плавного появления */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
+.subtitle {
+    color: #f0f0f0;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 15px;
+}
 
-        .fade-in {
-            animation: fadeIn 1s ease-in-out forwards;
-        }
+.information {
+    margin: 10px;
+    text-align: left;
+    color: #ff8a8a;
+    font-size: 12px;
+}
 
-        /* Стили для эффекта затухания */
-        .release-item {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
+.information2 {
+    text-align: justify;
+    color: #d3c1d2;
+    font-size: 12px;
+    line-height: 1.35;
+}
 
-        .release-item.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+.information3 {
+    margin: 10px;
+    text-align: center;
+    color: #e23333;
+    filter: drop-shadow(0px 3px 1px rgba(0, 0, 0, 0.1));
+    font-style: unset;
+}
 
-        .release-item.unvisible {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-            /* ГРАДИЕНТ СГНИЗУ И СВЕРХУ*/
-                    /* Градиент сверху */
-        .fade-top {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 100px;
-            background: linear-gradient(to bottom, #242424, rgba(36, 36, 36, 0));
-            z-index: 2;
-            pointer-events: none;
-        }
+.highlight {
+    color: #97e1e0;
+}
 
-        /* Градиент снизу */
-        .fade-bottom {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100px;
-            background: linear-gradient(to top, #242424, rgba(36, 36, 36, 0));
-            z-index: 2;
-            pointer-events: none;
-        }
+.releases-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
 
-        /* Стили для строки с иконками */
-        .icon-container {
-            display: flex;
-            justify-content: center;
-            gap: 10px; /* Уменьшенный промежуток между иконками */
-            padding: 10px;
-            background-color: #202020;
-            flex-wrap: wrap; /* Перенос иконок на новую строку, если не хватает места */
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 -6px 15px rgba(0, 0, 0, 0.15);
-        }
+.releases-grid-head {
+    display: grid;
+    grid-template-columns: minmax(120px, 1fr) 2fr;
+    gap: 20px;
+    padding: 20px 20px 20px 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    align-items: center; /* Выравнивание по вертикали по центру */
+}
 
-        .icon-container a {
-            text-decoration: none;
-            filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.25)); /* Тень */
-        }
+.release-item {
+    filter: drop-shadow(0px 3px 1px rgba(0, 0, 0, 0.1));
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
 
-        .icon-container a img {
-            width: 38px; /* Стандартный размер иконок */
-            height: 38px;
-            transition: transform 0.3s ease;
-        }
+.release-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-        .icon-container a:hover img {
-            transform: scale(1.2); /* Увеличение иконки при наведении */
-        }
+.release-item.unvisible {
+    opacity: 0;
+    transform: translateY(20px);
+}
 
-        /* Медиазапросы для адаптации под маленькие экраны */
-        @media (max-width: 768px) {
-            .icon-container a img {
-                width: 34px;
-                height: 34px;
-            }
-        }
+.delayed-link {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
 
-        @media (max-width: 480px) {
-            .icon-container a img {
-                width: 30px;
-                height: 30px;
-            }
-            .icon-container {
-                gap: 8px; /* Ещё меньше промежуток на очень маленьких экранах */
-            }
-        }
+.delayed-link.loading {
+    opacity: 1; /* Пример изменения стиля при загрузке */
+}
 
-        @media (max-width: 320px) { /* Для iPhone SE */
-            .icon-container a img {
-                width: 26px;
-                height: 26px;
-            }
-            .icon-container {
-                gap: 6px; /* Минимальный промежуток */
-            }
-        }
+.cover {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
 
-        /* Стилизация Плейлиста VK */
-        .vk-playlist-container {
-            background-color: #242424; /* Фон контейнера */
-            padding: 10px; /* Отступы вокруг виджета */
-            border-radius: 8px; /* Закругленные углы */
-            }
+.cover:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
+    box-shadow: 0 0px 50px #fff0e4;
+    transition: box-shadow 0.5s ease, transform 0.4s ease, opacity 0.3s ease;
+}
+
+.empty-cover {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    background: linear-gradient(to top, #242424, #434343);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: none;
+}
+
+.empty-cover:hover {
+    transform: scale(1.08);
+    opacity: 0.9;
+    box-shadow: 0 0px 50px rgba(0, 0, 0, 0.6);
+    transition: box-shadow 0.5s ease, transform 0.2s ease, opacity 0.3s ease;
+}
+
+.release-title {
+    color: #f0f0f0;
+    margin-top: 10px;
+    font-size: 14px;
+    hyphens: auto;
+}
+
+.vk-playlist-container {
+    background-color: #242424;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.cover-section {
+    margin-top: 50px;
+}
+
+.cover-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cover-image:hover {
+    transform: scale(1.05);
+}
+
+.player-section {
+    margin-top: 50px;
+}
+
+.animated-emoji {
+    display: inline-block; /* Чтобы анимация работала корректно */
+    animation: moveRightLeftFinger 2s ease-in-out infinite; /* Ваша анимация */
+}
+
+.animated {
+    animation: moveRightLeft 3.6s ease-in-out infinite;
+}
+
+.animated2 {
+    animation: moveRightLeft 2.8s ease-in-out infinite;
+}
+
+.animated3 {
+    animation: moveRightLeft2 0.6s ease-in-out infinite;
+}
+
+.animated4 {
+    animation: moveRightLeft2 0.9s ease-in-out infinite;
+}
+
+.animatedHR {
+    animation: moveCircle 0.5s linear infinite;
+}
+
+.animatedHR2 {
+    animation: moveCircle2 0.5s linear infinite;
+}
+
+@keyframes moveRightLeftFinger {
+    0% {
+        transform: translateX(2px);
+    }
+    50% {
+        transform: translateX(-6px); /* Сдвиг вправо */
+    }
+    100% {
+        transform: translateX(2px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes moveRightLeft {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(16px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveRightLeft2 {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(1px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveRightLeftHR {
+    0% {
+        transform: translateX(-3px);
+    }
+    50% {
+        transform: translateX(3px);
+    }
+    100% {
+        transform: translateX(-3px);
+    }
+}
+
+@keyframes moveCircle {
+    0% {
+        transform: translate(0%, 0%) rotate(0deg) translateX(0.4px) rotate(0deg);
+    }
+    100% {
+        transform: translate(0%, 0%) rotate(360deg) translateX(0.4px) rotate(-360deg);
+    }
+}
+
+@keyframes moveCircle2 {
+    0% {
+        transform: translate(0%, 0%) rotate(0deg) translateX(0.4px) rotate(0deg);
+    }
+    100% {
+        transform: translate(0%, 0%) rotate(-360deg) translateX(0.4px) rotate(360deg);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.fade-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, #242424, rgba(36, 36, 36, 0));
+    z-index: 2;
+    pointer-events: none;
+}
+
+.fade-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to top, #242424, rgba(36, 36, 36, 0));
+    z-index: 2;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .icon-container a img {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+@media (max-width: 480px) {
+    .icon-container a img {
+        width: 30px;
+        height: 30px;
+    }
+    .icon-container {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 320px) {
+    .icon-container a img {
+        width: 26px;
+        height: 26px;
+    }
+    .icon-container {
+        gap: 6px;
+    }
+}
+
     </style>
             <script src="https://vk.com/js/api/openapi.js" type="text/javascript"></script>
                 <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
@@ -292,41 +449,17 @@
         // Вызываем handleScroll при загрузке страницы, чтобы проверить видимость элементов
         window.addEventListener('load', handleScroll);
     </script>
-<!-- - - - VK плейлист скрипт - - - -->
-<!-- <script type="text/javascript" src="https://vk.com/js/api/openapi.js?173"></script> 
-<script type="text/javascript">
-  (function() {
-    VK.Widgets.Playlist("vk_playlist_-215851005_13", -215851005, 13,'a23c429c8fae9942b3');
-  }());
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Ждем, пока iframe загрузится
-    const checkIframe = setInterval(() => {
-        const iframe = document.querySelector('.vk-playlist-container iframe');
-        if (iframe) {
-            clearInterval(checkIframe); // Останавливаем проверку
-
-            // Изменяем стили iframe
-            iframe.style.backgroundColor = '#dbdbdb'; // Фон iframe
-            iframe.style.border = 'none'; // Убираем границу
-			// Изменяем стили iframe
-            iframe.style.filter = 'invert(1) brightness(0.8) contrast(0.75) hue-rotate(320deg) grayscale(1) saturate(0.1)';
-        }
-    }, 100); // Проверяем каждые 100 мс 
-});
-</script>  -->
 </head>
 <body>
-<!-- Градиент сверху -->
-<div class="fade-top"></div>
-<!-- Основной контент -->
-<div class="content">
+    <!-- Градиент сверху -->
+    <div class="fade-top"></div>
+    <!-- Основной контент -->
+    <div class="content">
     <header>
-        <a href="https://open.spotify.com/artist/27UjAHfHcL3Bh6u53DIT5V?si=UVA0VxETRWODDIQt5jEN5Q">AWALORES</a>
+        <a href="https://open.spotify.com/artist/27UjAHfHcL3Bh6u53DIT5V">AWALORES</a>
     </header>
-<!-- Строка с иконками музыкальных площадок -->
-<div class="icon-container">
+    <!-- Строка с иконками музыкальных площадок -->
+    <div class="icon-container">
     <a href="https://vk.com/artist/awalores" target="_blank">
         <img src="icons/vk.png" alt="VK">
     </a>
@@ -336,11 +469,11 @@ document.addEventListener('DOMContentLoaded', function() {
     <a href="https://www.youtube.com/channel/UCQqDNJ4uwps4s9uXhW-oHVQ" target="_blank">
         <img src="icons/youtube.png" alt="YouTube">
     </a>
-    <a href="https://open.spotify.com/artist/27UjAHfHcL3Bh6u53DIT5V?si=0OgyYOsYR5Ke-yB3Gbc3qg" target="_blank">
+    <a href="https://open.spotify.com/artist/27UjAHfHcL3Bh6u53DIT5V" target="_blank"  onclick="window.location.href='spotify:artist:27UjAHfHcL3Bh6u53DIT5V'; return false;">
         <img src="icons/spotify.png" alt="Spotify">
     </a>
     <a href="https://band.link/AWALORES" target="_blank">
-        <img src="icons/bandlink.png" alt="BandLink">
+        <img src="icons/bandlink.png" alt="BandLink" style="transform: scale(1.1); filter: drop-shadow(0 2.1px 0.75px rgba(255, 0, 0, 0.45));"">
     </a>
     <a href="https://music.yandex.ru/artist/17363429" target="_blank">
         <img src="icons/yandex-music.png" alt="YandexMusic">
@@ -354,134 +487,164 @@ document.addEventListener('DOMContentLoaded', function() {
     <a href="https://soundcloud.com/awalores-music" target="_blank">
         <img src="icons/soundcloud.png" alt="SoundCloud">
     </a>
-</div>
+    </div>
 		<!-- - - - VK плейлист - - - -->
-<!-- <div id="vk_playlist_-215851005_13" class="vk-playlist-container"></div> -->
+    <!-- <div id="vk_playlist_-215851005_13" class="vk-playlist-container"></div> -->
 
-<div class="subtitle">Инфо: COMING SOON</div>
-<div class="subtitle">• • • • •</div>
-    <hr>  <!-- Полосочка -->
+    <div class="releases-grid-head">
+    <!-- Шаблон Релиза -->
+    <div class="release-item fade-in">
+        <div class="information3 animated3" style="font-size: 12px">Уже на площадках</div>
+        <a href="https://vk.com/music/album/-2000256900_23256900_06e179704159dfbe20" class="delayed-link">
+        <img src="https://sun9-66.userapi.com/impg/qHJQbpu7KIjsdKh51-_sXwuTg6__Jo7lQwxxFw/YPkm6RClkSo.jpg?size=300x300&quality=95&sign=4376d5c60ad770568bd60b97194120a1&type=audio" alt="Обложка релиза" class="cover">
+        </a>
+        <div class="release-title animated3">To Pieces</div>
+    </div>
 
-<div class="subtitle">Альбомы × EP</div>
+    <!-- Инфо (Шаблон Релиза) -->
+    <div>
+        <div class="information"></div>
+        <div class="release-item information2" style="text-align: none;">В этом приложении собраны все релизы из <span class="highlight">VK Music</span>. 
+            Вы можете легко перейти к любому релизу, просто нажав на него. 
+            Также вверху есть иконки для перехода на другие музыкальные платформы.</div>
+        <div class="release-item information" style="color: #dfd8e1; font-size: 11px;">Музыка разделена на две категории:</div>
+        <div class="release-item information animatedHR" style="color: #bebebe;">• Альбомы и мини-альбомы (EP)</div>
+        <div class="information animatedHR2" style="color: #bebebe;">• Синглы</div>
+        <div class="release-item information" style="color: #619dff; text-align: right; font-size: 13px;">
+            <a href="https://vk.com/music/playlist/-215851005_13" style="color: inherit; text-decoration: none;"><span class="animated-emoji">👉 </span> Ссылка на плейлист<br><span style="font-size: 10.5px;">(все релизы в <span class="highlight">VK Music</span>)</span></a></div> 
+    </div>
+    </div>
+      <!-- Пропуск строки -->
+
+    <div class="subtitle animatedHR">Альбомы × EP</div>
     <hr>  <!-- Полосочка -->
 
     <div class="releases-grid">
-        <!-- Пример релиза 1 -->
+        <!-- Шаблон Релиза -->
         <div class="release-item fade-in">
+            <a href="https://vk.com/music/album/-2000098323_22098323_cfa530f4469b273658" class="delayed-link">
             <img src="https://sun9-42.userapi.com/impg/S3GcdfFHZ2tQXICzPCZjgWr4gymcKO1zGdPXng/uH9Ws2XeKB4.jpg?size=300x300&amp;quality=95&amp;sign=bdf45763629ee90599d33fe9ca224e30&amp;type=audio" alt="Обложка релиза" class="cover">
+            </a>
             <div class="release-title">Freedom «IRL» Exists</div>
         </div>
 
-        <!-- Пример релиза 2 -->
+        <!-- Шаблон Релиза -->
         <div class="release-item fade-in">
+            <a href="https://vk.com/music/album/-2000337158_19337158_e587c4c873a146c31a" class="delayed-link">
             <img src="https://sun9-24.userapi.com/impg/1sAuQFvO8IO46ophXo8NzQFJsFUqNrL7YJGI0Q/DFBxeyYJ6Zs.jpg?size=300x300&amp;quality=95&amp;sign=974154709e947774f2b01d677fe63f39&amp;type=audio" alt="Обложка релиза" class="cover">
+            </a>
             <div class="release-title">Moral Violence</div>
         </div>
-        
-        <!-- Следующий блок с обложками ниже -->
-        
     </div>
 
     <div class="releases-grid">
-        <!-- Пример релиза 3 -->
+        <!-- Шаблон Релиза -->
         <div class="release-item fade-in">
+            <a href="https://vk.com/music/album/-2000104201_20104201_f96db481a2d252939d" class="delayed-link">
             <img src="https://sun9-64.userapi.com/impg/H43ksji6eCKtuANeNnrxkkyUD4foQvhIxlBHdQ/DkuFqZ4FbkE.jpg?size=300x300&amp;quality=95&amp;sign=6fbadf6f169823d155c11c6139dc98b1&amp;type=audio" alt="Обложка релиза" class="cover">
+            </a>
             <div class="release-title">It Too Much</div>
         </div>
 
-        <!-- Пример релиза 4 -->
+        <!-- Шаблон Релиза -->
         <div class="release-item fade-in">
+            <a href="https://vk.com/music/album/-2000299794_20299794_8946109453efd34aaf" class="delayed-link">
             <img src="https://sun9-71.userapi.com/impg/3HjrXTk0Vz2SknNdqWKMaBcGTqnN9f1O0jjXBA/xGEPU8xXFNc.jpg?size=300x300&amp;quality=95&amp;sign=190afe5833da0d867f098b6afcf62032&amp;type=audio" alt="Обложка релиза" class="cover">
+            </a>
             <div class="release-title">ITM.mix</div>
         </div>
     </div>
     
-    <div class="subtitle">Синглы</div>
+    <div class="subtitle animatedHR">Синглы</div>
     <hr>
-    
-          <!-- Следующий блок с обложками ниже -->
-    
-      <div class="releases-grid">
-        <!-- Пример релиза 5 -->
+            <!-- Следующий блок с обложками ниже -->
+    <div class="releases-grid">
+            <!-- Шаблон Релиза ПУСТОЙ вопрос -->
         <div class="release-item fade-in">
+            <a href="https://vk.com/music/album/-2000256900_23256900_06e179704159dfbe20" class="delayed-link">
+            <img src="https://sun9-66.userapi.com/impg/qHJQbpu7KIjsdKh51-_sXwuTg6__Jo7lQwxxFw/YPkm6RClkSo.jpg?size=300x300&quality=95&sign=4376d5c60ad770568bd60b97194120a1&type=audio" alt="Обложка релиза" class="cover">
+            </a>
+            <div class="release-title">To Pieces</div>
+        </div> 
+            <!-- Шаблон Релиза -->
+        <div class="release-item fade-in">
+            <a href="https://vk.com/music/album/-2000277800_21277800_60d4bd3b031a963f40" class="delayed-link">
             <img src="https://sun9-80.userapi.com/impg/Efhh4IkZ2OFVmb3FAzySk1JLj3ne9oKkFRMKFg/5xcJWlkQc10.jpg?size=300x300&amp;quality=95&amp;sign=56d1adf4b5d4f55a12e6512061509c99&amp;type=audio" alt="Обложка релиза" class="cover">
+            </a>
             <div class="release-title">Techno Rave</div>
         </div>
-
-        <!-- Пример релиза 6 -->
+        </div>
+    <div class="releases-grid">
+        <!-- Шаблон Релиза -->
         <div class="release-item fade-in">
-            <img src="https://sun9-79.userapi.com/impg/JlMOnMXaVL_7qqZVh8xeSeCrOmG_WflMRAAaCA/Z-ROHDCfxXs.jpg?size=300x300&amp;quality=95&amp;sign=f7a973ae526247f2ff101f1183babbf1&amp;type=audio" alt="Обложка релиза" class="cover">
-            <div class="release-title">Дефицит</div>
+            <a href="https://vk.com/music/album/-2000600999_19600999_d8a35dedb83f8f27ed" class="delayed-link">
+            <img src="https://sun9-65.userapi.com/impg/n7cka0gKcnxgpE0jwl4X4kIYwpw7SpgO-aPCWg/apLXC8Qm1Bs.jpg?size=300x300&amp;quality=95&amp;sign=3bbf30d99a74d8a556adba8458acc917&amp;type=audio" alt="Обложка релиза" class="cover">
+            <div class="release-title">Handpan Song from<br>Non-Existence</div>
+            </a>
+        </div>
+
+        <div class="release-item fade-in">
+            <a href="https://vk.com/music/album/-2000604460_19604460_7143cb4381e4070197" class="delayed-link">
+            <img src="https://sun9-20.userapi.com/impg/IbT87aR_8Wiqm5YqJj_hUkAK3VKeSMryKgJrAw/fGFNsmXsJzk.jpg?size=300x300&amp;quality=95&amp;sign=e0cf548483c1abda43bbc22b7b05e61b&amp;type=audio" alt="Обложка релиза" class="cover">
+            </a>
+            <div class="release-title">Behind Heart</div>
         </div>
     </div>
-    
-             <!-- Следующий блок с обложками ниже -->
-    
-      <div class="releases-grid">
-        <!-- Пример релиза 7 -->
+
+    <div class="releases-grid">
+        <!-- Шаблон Релиза -->
         <div class="release-item fade-in">
+            <a href="https://vk.com/music/album/-2000534080_20534080_fdb12bc5e4ac2ae452" class="delayed-link">
             <img src="https://sun9-12.userapi.com/impg/F890l8_woxwUTXR_OZ-b2Y0Qema-0IagsjB-BA/JpBMtyk7sr4.jpg?size=300x300&amp;quality=95&amp;sign=a6fba8662fe03ac9dc9f27e6ed69d9ee&amp;type=audio" alt="Обложка релиза" class="cover">
+            </a>
             <div class="release-title">Now</div>
         </div>
 
-        <!-- Пример релиза 8 -->
+        <!-- Шаблон Релиза -->
         <div class="release-item fade-in">
+            <a href="https://vk.com/music/album/-2000926594_20926594_6fc89652915686febe" class="delayed-link">
             <img src="https://sun9-17.userapi.com/impg/5B3YWpQ_I2Iduk_2PqNiHzn-gbOeyZiaUvAWmw/7Ko6iWrbA2M.jpg?size=300x300&amp;quality=95&amp;sign=c4c16a9e83ffb2a2bea2bf930f1251f1&amp;type=audio" alt="Обложка релиза" class="cover">
+            </a>
             <div class="release-title">Later</div>
         </div>
-      </div>
-    
-             <!-- Следующий блок с обложками ниже -->
-    
-      <div class="releases-grid">
-        <!-- Пример релиза 9 -->
-        <div class="release-item fade-in">
-            <img src="https://sun9-37.userapi.com/impg/Q1RBvzK3krhj7KqVx6fnMkXZz6XtAYqK8wvkmQ/iAocTtNh2tg.jpg?size=300x300&amp;quality=95&amp;sign=95c1d8ce5e9c4da5e2e20065f34f61d1&amp;type=audio" alt="Обложка релиза" class="cover">
-            <div class="release-title">Happy New Year Listeners</div>
-        </div>
+    </div>
 
-        <!-- Пример релиза 10 -->
+    <div class="releases-grid">
         <div class="release-item fade-in">
-            <img src="https://sun9-65.userapi.com/impg/n7cka0gKcnxgpE0jwl4X4kIYwpw7SpgO-aPCWg/apLXC8Qm1Bs.jpg?size=300x300&amp;quality=95&amp;sign=3bbf30d99a74d8a556adba8458acc917&amp;type=audio" alt="Обложка релиза" class="cover">
-            <div class="release-title">Handpan Song from 
-                Non-Existence</div>
-        </div>
-      </div>
-    
-             <!-- Следующий блок с обложками ниже -->
-    
-      <div class="releases-grid">
-        <!-- Пример релиза 11 -->
-        <div class="release-item fade-in">
-            <img src="https://sun9-20.userapi.com/impg/IbT87aR_8Wiqm5YqJj_hUkAK3VKeSMryKgJrAw/fGFNsmXsJzk.jpg?size=300x300&amp;quality=95&amp;sign=e0cf548483c1abda43bbc22b7b05e61b&amp;type=audio" alt="Обложка релиза" class="cover">
-            <div class="release-title">Behind Heart</div>
-        </div>
-
-        <!-- Пример релиза 12 -->
-        <div class="release-item fade-in">
+            <a href="https://vk.com/music/album/-2000496231_19496231_4218c0f19c1540af29" class="delayed-link">
             <img src="https://sun9-13.userapi.com/impg/-i0EW1Z1u8K8bqEEcJN_JYukMknGvHVs_tCLTQ/o83E3mjQwQc.jpg?size=300x300&amp;quality=95&amp;sign=3d6e8f0df72566d020ea2fbcd32042b9&amp;type=audio" alt="Обложка релиза" class="cover">
+            </a>
             <div class="release-title">Ты же знаешь</div>
         </div>
-      </div>
-    
-         <!-- Следующий блок с обложками ниже -->
-    
-      <div class="releases-grid">
-        <!-- Пример релиза 13 -->
+
         <div class="release-item fade-in">
+            <a href="https://vk.com/music/album/-2000277801_21277801_e36cb7419a2b2aa38c" class="delayed-link">
+            <img src="https://sun9-79.userapi.com/impg/JlMOnMXaVL_7qqZVh8xeSeCrOmG_WflMRAAaCA/Z-ROHDCfxXs.jpg?size=300x300&amp;quality=95&amp;sign=f7a973ae526247f2ff101f1183babbf1&amp;type=audio" alt="Обложка релиза" class="cover">
+            </a>
+            <div class="release-title">Дефицит</div>
+        </div>
+    </div>
+
+    <div class="releases-grid">
+        <!-- Шаблон Релиза -->
+        <div class="release-item fade-in">
+            <a href="https://vk.com/music/album/-2000728291_17728291_8834dc1782b759ec34" class="delayed-link">
             <img src="https://sun9-77.userapi.com/impf/PQPhmzscgvr8BFTKK5eS4cDbyiSK0IqTrf-2yA/ErHXZDsjyPs.jpg?size=300x300&amp;quality=96&amp;sign=206f3d1f34883aadca4418a168708ee6&amp;type=audio" alt="Обложка релиза" class="cover">
+            </a>
             <div class="release-title">Grace</div>
         </div>
-          
-        <!-- Пример релиза 14 -->
         <div class="release-item fade-in">
-            <div class="empty-cover"></div>
-        </div> 
-      </div>
-<!-- Градиент снизу -->
-<div class="fade-bottom"></div>
-<footer>
-©AWALORES
-</footer>
+            <a href="https://vk.com/music/album/-2000689142_19689142_25b9dce568733095da" class="delayed-link">
+            <img src="https://sun9-37.userapi.com/impg/Q1RBvzK3krhj7KqVx6fnMkXZz6XtAYqK8wvkmQ/iAocTtNh2tg.jpg?size=300x300&amp;quality=95&amp;sign=95c1d8ce5e9c4da5e2e20065f34f61d1&amp;type=audio" alt="Обложка релиза" class="cover">
+            </a>
+            <div class="release-title">Happy New Year Listeners</div>
+        </div>
+    </div>
+          
+    <!-- Градиент снизу -->
+    <div class="fade-bottom"></div>
+    <footer>
+    ©AWALORES
+    </footer>
 </body>
 </html>
