@@ -80,6 +80,34 @@ audio {
     margin-top: 20px;
 }
 
+.rating-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.stars {
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.star {
+    color: #ccc; /* Цвет неактивных звёзд */
+    transition: color 0.2s ease;
+}
+
+.star:hover,
+.star.active {
+    color: #ffcc00; /* Цвет активных звёзд */
+}
+
+.rating-text {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #bdbdbd; /* Цвет по умолчанию */
+    font-weight: bolder;
+    transition: color 0.2s ease; /* Плавное изменение цвета */
+}
+
 .icon-container {
     display: flex;
     justify-content: center;
@@ -640,7 +668,16 @@ audio {
             <div class="release-title">Happy New Year Listeners</div>
         </div>
     </div>
-          
+    <div class="rating-container">
+        <div class="stars">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+        <div class="rating-text">Оцените приложение</div>
+    </div>
     <!-- Градиент снизу -->
     <div class="fade-bottom"></div>
     <footer>
