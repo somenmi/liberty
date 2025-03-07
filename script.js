@@ -101,4 +101,61 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 1000);
         });
     });
+
+    const stars = document.querySelectorAll('.star');
+    const ratingText = document.querySelector('.rating-text');
+
+    stars.forEach(star => {
+        star.addEventListener('click', function () {
+            const value = this.getAttribute('data-value');
+
+            // Убираем активный класс у всех звёзд
+            stars.forEach(s => s.classList.remove('active'));
+
+            // Добавляем активный класс выбранным звёздам
+            for (let i = 0; i < value; i++) {
+                stars[i].classList.add('active');
+            }
+
+            // Обновляем текст и его цвет
+            ratingText.textContent = `Вы оценили на ${value} из 5`;
+            ratingText.style.color = '#ffcc00'; // Цвет текста как у активных звёзд
+
+            // Отправляем оценку на сервер (если нужно)
+            sendRatingToServer(value);
+        });
+
+        // Подсветка звёзд при наведении
+        star.addEventListener('mouseover', function () {
+            const value = this.getAttribute('data-value');
+            stars.forEach((s, index) => {
+                if (index < value) {
+                    s.classList.add('hover');
+                } else {
+                    s.classList.remove('hover');
+                }
+            });
+        });
+
+        star.addEventListener('mouseout', function () {
+            stars.forEach(s => s.classList.remove('hover'));
+        });
+    });
+
+    // Функция для отправки оценки на сервер
+    function sendRatingToServer(rating) {
+        VK.Bridge.send('VKWebAppCallAPIMethod', {
+            method: 'storage.set', // Пример метода VK API
+            params: {
+                key: 'user_rating',
+                value: rating,
+            },
+        })
+            .then(response => {
+                console.log('Оценка сохранена:', response);
+            })
+            .catch(error => {
+                console.error('Ошибка:', error);
+            });
+    }
 });
