@@ -158,4 +158,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.error('Ошибка:', error);
             });
     }
+    
+    function sendRatingToServer(rating) {
+        fetch('https://feedback-app.vercel.app/api/save-rating', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ rating: rating }),
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Оценка сохранена:', data);
+            })
+            .catch(error => {
+                console.error('Ошибка:', error);
+            });
+    }
 });
