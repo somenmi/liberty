@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function sendRatingToServer(rating) {
-        fetch('https://feedback-app.vercel.app/api/save-rating', {
+        fetch('https://feedback-app-ruby-delta.vercel.app/api/save-rating', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
