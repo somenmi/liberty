@@ -91,21 +91,21 @@ audio {
 }
 
 .star {
-    color: #ccc; /* Цвет неактивных звёзд */
+    color: #ccc; 
     transition: color 0.2s ease;
 }
 
 .star:hover,
 .star.active {
-    color: #ffcc00; /* Цвет активных звёзд */
+    color: #ffcc00; 
 }
 
 .rating-text {
     margin-top: 10px;
     font-size: 15px;
-    color: #bdbdbd; /* Цвет по умолчанию */
+    color: #bdbdbd; 
     font-weight: bolder;
-    transition: color 0.2s ease; /* Плавное изменение цвета */
+    transition: color 0.2s ease; 
 }
 
 .icon-container {
@@ -208,7 +208,7 @@ audio {
 }
 
 .delayed-link.loading {
-    opacity: 1; /* Пример изменения стиля при загрузке */
+    opacity: 1; 
 }
 
 .cover {
@@ -317,7 +317,7 @@ audio {
         transform: translateX(2px);
     }
     50% {
-        transform: translateX(-6px); /* Сдвиг вправо */
+        transform: translateX(-6px);
     }
     100% {
         transform: translateX(2px);
@@ -444,12 +444,10 @@ audio {
             <script src="https://vk.com/js/api/openapi.js" type="text/javascript"></script>
                 <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
                 <script>
-                    // Отправляет событие инициализации нативному клиенту
                      vkBridge.send('VKWebAppInit');
                 </script>
                 <script src="script.js"></script>
     <script>
-        // Функция для проверки видимости элемента
         function isElementInViewport(el) {
             const rect = el.getBoundingClientRect();
             return (
@@ -457,7 +455,6 @@ audio {
             );
         }
 
-        // Функция для обработки скролла
         function handleScroll() {
             const items = document.querySelectorAll('.release-item');
             items.forEach(item => {
@@ -471,10 +468,8 @@ audio {
             });
         }
 
-        // Добавляем обработчик события скролла
         window.addEventListener('scroll', handleScroll);
 
-        // Вызываем handleScroll при загрузке страницы, чтобы проверить видимость элементов
         window.addEventListener('load', handleScroll);
     </script>
 <script type="application/ld+json">
@@ -568,7 +563,7 @@ audio {
     <div class="releases-grid">
         <!-- Шаблон Релиза -->
         <div class="release-item fade-in">
-            <a href="https://vk.com/music/album/-2000098323_22098323_cfa530f4469b273658" class="delayed-link">
+            <a href="https://vk.com/music/album/-2000098323_22098323_cfa530f4469b273658" class="">
             <img src="https://sun9-42.userapi.com/impg/S3GcdfFHZ2tQXICzPCZjgWr4gymcKO1zGdPXng/uH9Ws2XeKB4.jpg?size=300x300&amp;quality=95&amp;sign=bdf45763629ee90599d33fe9ca224e30&amp;type=audio" alt="Обложка релиза" class="cover">
             </a>
             <div class="release-title">Freedom «IRL» Exists</div>
@@ -576,7 +571,7 @@ audio {
 
         <!-- Шаблон Релиза -->
         <div class="release-item fade-in">
-            <a href="https://vk.com/music/album/-2000337158_19337158_e587c4c873a146c31a" class="delayed-link">
+            <a href="https://vk.com/music/album/-2000337158_19337158_e587c4c873a146c31a" class="">
             <img src="https://sun9-24.userapi.com/impg/1sAuQFvO8IO46ophXo8NzQFJsFUqNrL7YJGI0Q/DFBxeyYJ6Zs.jpg?size=300x300&amp;quality=95&amp;sign=974154709e947774f2b01d677fe63f39&amp;type=audio" alt="Обложка релиза" class="cover">
             </a>
             <div class="release-title">Moral Violence</div>
@@ -586,7 +581,7 @@ audio {
     <div class="releases-grid">
         <!-- Шаблон Релиза -->
         <div class="release-item fade-in">
-            <a href="https://vk.com/music/album/-2000104201_20104201_f96db481a2d252939d" class="delayed-link">
+            <a href="https://vk.com/music/album/-2000104201_20104201_f96db481a2d252939d" class="">
             <img src="https://sun9-64.userapi.com/impg/H43ksji6eCKtuANeNnrxkkyUD4foQvhIxlBHdQ/DkuFqZ4FbkE.jpg?size=300x300&amp;quality=95&amp;sign=6fbadf6f169823d155c11c6139dc98b1&amp;type=audio" alt="Обложка релиза" class="cover">
             </a>
             <div class="release-title">It Too Much</div>
@@ -594,7 +589,7 @@ audio {
 
         <!-- Шаблон Релиза -->
         <div class="release-item fade-in">
-            <a href="https://vk.com/music/album/-2000299794_20299794_8946109453efd34aaf" class="delayed-link">
+            <a href="https://vk.com/music/album/-2000299794_20299794_8946109453efd34aaf" class="">
             <img src="https://sun9-71.userapi.com/impg/3HjrXTk0Vz2SknNdqWKMaBcGTqnN9f1O0jjXBA/xGEPU8xXFNc.jpg?size=300x300&amp;quality=95&amp;sign=190afe5833da0d867f098b6afcf62032&amp;type=audio" alt="Обложка релиза" class="cover">
             </a>
             <div class="release-title">ITM.mix</div>
@@ -609,14 +604,14 @@ audio {
             <!-- Шаблон Релиза ПУСТОЙ вопрос -->
         <div class="release-item fade-in">
             <a href="ССЫЛКА" class="delayed-link">
-            <img src="ССЫЛКА" alt="Обложка релиза" class="cover">
+            <img src="ССЫЛКА" alt="СКОРО" class="cover">
             </a>
             <div class="release-title">None</div>
         </div> 
             <!-- Шаблон Релиза -->
         <div class="release-item fade-in">
             <a href="ССЫЛКА" class="delayed-link">
-            <img src="ССЫЛКА" alt="Обложка релиза" class="cover">
+            <img src="ССЫЛКА" alt="СКОРО" class="cover">
             </a>
             <div class="release-title">Only</div>
         </div>
